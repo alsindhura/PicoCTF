@@ -1,4 +1,4 @@
-![exit](https://github.com/user-attachments/assets/bdf6eeb9-7d83-4d3f-8b1c-393d89cf5998)Download the image
+CTF Challenge Link: https://play.picoctf.org/practice/challenge/460?difficulty=1&page=2 
 
 We find that
 We were given a red image.
