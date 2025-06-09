@@ -10,7 +10,7 @@ We get this data for the downloaded image
 
 `exiftool red.png`
 
-![exit](https://github.com/user-attachments/assets/b697e042-13f7-464f-9ad0-a806925c1409)
+![exit](https://github.com/user-attachments/assets/2ec5a221-edaa-46c7-9169-033a6c1e947c)
 
 and we see the first letters of each line of the poem 
 `C H E C K L S B`
