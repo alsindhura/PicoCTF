@@ -6,25 +6,34 @@ It looked boring. Just red. Nothing special.
 ![red](https://github.com/user-attachments/assets/5b1065ff-2ecb-4e19-a917-9583e949a2f5)
 
 
-We try to use the tool called exiftool
-exiftool is a command-line application for reading, writing, and editing metadata in files — especially image, audio, video, and document files.
-We get this data for the downloaded image
+We can use the tool called exiftool. 
+Exiftool is a command-line application for reading, writing, and editing metadata in files — especially image, audio, video, and document files.
+We get this data from the downloaded image after running: 
 
 `exiftool red.png`
 
 ![exit](https://github.com/user-attachments/assets/2ec5a221-edaa-46c7-9169-033a6c1e947c)
 
-and we see the first letters of each line of the poem 
-`C H E C K L S B`
+The metadata showed a poem:
+```
+Crimson heart, vibrant and bold,
+Hearts flutter at your sight.
+Evenings glow softly red,
+Cherries burst with sweet life.
+Kisses linger with your warmth.
+Love deep as merlot.
+Scarlet leaves falling softly,
+Bold in every stroke.
+```
 
-So now we’re told: the hidden data is in the Least Significant Bits of the image.
-We’ll need a tool like zsteg or similar to extract it.
-zsteg is a command-line tool used to detect and extract hidden data embedded in PNG and BMP images using Least Significant Bit (LSB) steganography and similar techniques.
+the first letters of each line spelled: `C H E C K L S B` and it looks like a clue
+
+Since the hint mentioned “Least Significant Bits,” We have decided to use `zsteg`, a tool that can find hidden data stored in the least important bits of image pixels.
 
 `zsteg red.png`
 ![zsteg](https://github.com/user-attachments/assets/cd3cc713-46dc-40de-ac65-63bdd88bd694)
 
-We find a Hidden Base64 String which is repeated so we add it to a text file
+We find a Hidden Base64 String which is repeated several time and we add only single instance of this string to a text file called hash.txt
 └─$ echo cGljb0NURntyM2RfMXNfdGgzX3VsdDFtNHQzX2N1cjNfZjByXzU0ZG4zNTVffQ== > hash.txt 
 
 and then we decode it and get the flag
