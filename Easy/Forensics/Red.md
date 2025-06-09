@@ -1,8 +1,10 @@
 CTF Challenge Link: https://play.picoctf.org/practice/challenge/460?difficulty=1&page=2 
 
-We find that
-We were given a red image.
+We find that we were given a red image and we download it.
 It looked boring. Just red. Nothing special.
+
+![red](https://github.com/user-attachments/assets/5b1065ff-2ecb-4e19-a917-9583e949a2f5)
+
 
 We try to use the tool called exiftool
 exiftool is a command-line application for reading, writing, and editing metadata in files — especially image, audio, video, and document files.
